@@ -23,6 +23,7 @@ const BurgerBuilder = () => {
     <Fragment>
       <Burger ingredients={ingredients} />
       <BuildControls
+        totalPrice={totalPrice}
         ingredientAdded={(type) => {
           setIngredients({ ...ingredients, [type]: ingredients[type] + 1 });
           setTotalPrice(totalPrice + INGREDIENT_PRICES[type]);

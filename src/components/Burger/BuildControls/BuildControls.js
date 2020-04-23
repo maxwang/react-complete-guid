@@ -13,6 +13,9 @@ const BuildControls = (props) => {
   ];
   return (
     <div className="BuildControls">
+      <div>
+        Current Price: <strong>{props.totalPrice.toFixed(2)}</strong>
+      </div>
       {controls.map((ctrl) => (
         <BuildControl
           key={ctrl.label}
@@ -26,6 +29,7 @@ const BuildControls = (props) => {
 };
 
 BuildControls.propTypes = {
+  totalPrice: PropTypes.number.isRequired,
   ingredientRemoved: PropTypes.func.isRequired,
   ingredientAdded: PropTypes.func.isRequired,
 };
