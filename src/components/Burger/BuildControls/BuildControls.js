@@ -24,11 +24,15 @@ const BuildControls = (props) => {
           added={() => props.ingredientAdded(ctrl.type)}
         />
       ))}
+      <button className="OrderButton" disabled={props.purchasable}>
+        Order Now
+      </button>
     </div>
   );
 };
 
 BuildControls.propTypes = {
+  purchasable: PropTypes.bool.isRequired,
   totalPrice: PropTypes.number.isRequired,
   ingredientRemoved: PropTypes.func.isRequired,
   ingredientAdded: PropTypes.func.isRequired,
