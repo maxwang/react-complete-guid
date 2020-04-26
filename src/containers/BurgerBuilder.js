@@ -28,7 +28,14 @@ const BurgerBuilder = () => {
     <Fragment>
       {totalIngredients > 0 && (
         <Modal show={totalIngredients > 0}>
-          <BurgerSummary ingredients={ingredients} total={totalPrice} />
+          <BurgerSummary
+            ingredients={ingredients}
+            total={totalPrice}
+            burgerCancelled={() => {
+              setIngredients({ salad: 0, bacon: 0, cheese: 0, meat: 0 });
+              setTotalPrice(4);
+            }}
+          />
         </Modal>
       )}
       <Burger ingredients={ingredients} />
