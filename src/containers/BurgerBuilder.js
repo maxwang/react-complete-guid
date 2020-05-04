@@ -37,7 +37,7 @@ const BurgerBuilder = () => {
             }}
           />
         </Modal>
-      )}
+      )}mwmmwdadsdadadw 
       <Burger ingredients={ingredients} />
       <BuildControls
         totalPrice={totalPrice}
